@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Тест: в каком режиме живёт твоя нервная система | Vita Code</title>
+<meta name="description" content="Бесплатный интерактивный тест нервной системы. 12 вопросов — узнай, ты в надрыве, замирании или потоке. Результат с рекомендациями. Автор — Виктория Алексеенко, Vita Code.">
+<meta name="keywords" content="тест нервной системы, стресс тест, тест на выгорание, нервная система режим, надрыв или апатия, вегетативная нервная система, тест вагус, тест тревожность, Vita Code, Виктория Алексеенко, психологический тест, тест на стресс бесплатно">
+<meta name="author" content="Виктория Алексеенко, Vita Code">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://content.thevitacode.com/test/nervnaya-sistema/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Тест: в каком режиме живёт твоя нервная система?">
+<meta property="og:description" content="12 вопросов. 3 минуты. Узнай, ты в надрыве, замирании или включённом покое — и что с этим делать.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://content.thevitacode.com/test/nervnaya-sistema/">
+<meta property="og:site_name" content="Vita Code">
+<meta property="og:locale" content="ru_RU">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Тест: в каком режиме живёт твоя нервная система?">
+<meta name="twitter:description" content="12 вопросов. 3 минуты. Узнай свой режим — надрыв, замирание или поток.">
+
+<!-- Schema.org Quiz -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Quiz",
+  "name": "В каком режиме живёт твоя нервная система",
+  "description": "Интерактивный тест для определения режима нервной системы: надрыв (симпатическая активация), замирание (дорсальный вагус) или включённый покой (вентральный вагус).",
+  "educationalAlignment": {
+    "@type": "AlignmentObject",
+    "alignmentType": "educationalSubject",
+    "targetName": "Психология, нейронаука"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Виктория Алексеенко",
+    "url": "https://thevitacode.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vita Code",
+    "url": "https://thevitacode.com"
+  },
+  "numberOfQuestions": 12,
+  "inLanguage": "ru"
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --bg: #F8F3EA;
+  --bg-card: #ffffff;
+  --text: #3a2a2a;
+  --text-light: #6b5050;
+  --red: #8E1B36;
+  --gold: #C9982E;
+  --pink: #B85574;
+  --border: #F2EAD8;
+  --highlight: #F2EAD8;
+  --red-bg: #f9e8ec;
+  --pink-bg: #fdf0f3;
+  --gold-bg: #faf5e8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== COVER ===== */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.accent-line {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 16px auto;
+}
+
+.cover h1 {
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-size: clamp(28px, 7vw, 38px);
+  color: var(--red);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.cover .subtitle {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(16px, 4vw, 20px);
+  color: var(--pink);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.cover .desc {
+  font-size: 16px;
+  color: var(--text-light);
+  max-width: 340px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.brand-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: var(--text);
+  font-weight: 400;
+}
+
+.btn-start {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  margin-top: 28px;
+  transition: background 0.3s, transform 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-start:hover { background: #a02040; }
+.btn-start:active { transform: scale(0.97); }
+
+/* ===== PROGRESS ===== */
+.progress-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  padding: 12px 0 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.progress-bar-outer {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, var(--red), var(--pink));
+  border-radius: 2px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+.progress-text {
+  font-size: 13px;
+  color: var(--text-light);
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* ===== QUESTION ===== */
+.quiz-section {
+  display: none;
+  padding-bottom: 40px;
+}
+
+.quiz-section.active { display: block; }
+
+.question-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 28px 24px;
+  margin-top: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.q-label {
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.q-text {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(20px, 5vw, 24px);
+  color: var(--red);
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.25s;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+.option-btn:hover {
+  border-color: var(--pink);
+  background: var(--pink-bg);
+}
+
+.option-btn:active { transform: scale(0.98); }
+
+.option-btn .letter {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--red);
+  font-weight: 600;
+  font-size: 13px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: all 0.25s;
+}
+
+.option-btn.selected {
+  border-color: var(--red);
+  background: var(--red-bg);
+}
+
+.option-btn.selected .letter {
+  background: var(--red);
+  color: #fff;
+}
+
+/* ===== RESULTS ===== */
+.results-section {
+  display: none;
+  padding: 20px 0 60px;
+}
+
+.results-section.active { display: block; }
+
+.result-header {
+  text-align: center;
+  margin-bottom: 32px;
+  animation: fadeIn 0.5s ease;
+}
+
+.result-header h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(24px, 6vw, 32px);
+  color: var(--red);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.result-header .subtitle {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 16px;
+  color: var(--pink);
+  font-style: italic;
+}
+
+.score-visual {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 28px 0;
+  animation: fadeIn 0.6s ease;
+}
+
+.score-item {
+  text-align: center;
+  padding: 16px 12px;
+  border-radius: 12px;
+  min-width: 90px;
+}
+
+.score-item.red { background: var(--red-bg); }
+.score-item.pink { background: var(--pink-bg); }
+.score-item.gold { background: var(--gold-bg); }
+
+.score-num {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.score-item.red .score-num { color: var(--red); }
+.score-item.pink .score-num { color: var(--pink); }
+.score-item.gold .score-num { color: var(--gold); }
+
+.score-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  color: var(--text-light);
+}
+
+.result-block {
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+  animation: fadeIn 0.7s ease;
+}
+
+.result-block.main {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.result-block.red { background: var(--red-bg); border-color: var(--red); }
+.result-block.pink { background: var(--pink-bg); border-color: var(--pink); }
+.result-block.gold { background: var(--gold-bg); border-color: var(--gold); }
+.result-block.mixed { background: var(--highlight); border-color: var(--gold); }
+
+.result-block h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 20px;
+  color: var(--red);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.result-block p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.result-block p:last-child { margin-bottom: 0; }
+
+.result-block strong { color: var(--red); font-weight: 600; }
+
+.quote-block {
+  border-left: 3px solid var(--pink);
+  padding: 16px 20px;
+  margin: 24px 0;
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--red);
+  line-height: 1.6;
+}
+
+.cta-block {
+  text-align: center;
+  margin-top: 40px;
+  padding: 32px 24px;
+  background: linear-gradient(165deg, var(--bg) 0%, var(--highlight) 50%, var(--bg) 100%);
+  border-radius: 16px;
+  animation: fadeIn 0.8s ease;
+}
+
+.cta-block h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 20px;
+  color: var(--red);
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.cta-block p {
+  font-size: 16px;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.btn-guide {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background 0.3s, transform 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-guide:hover { background: #b8891f; }
+
+.retake-btn {
+  display: inline-block;
+  background: transparent;
+  color: var(--pink);
+  padding: 10px 28px;
+  border-radius: 25px;
+  border: 1px solid var(--pink);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.retake-btn:hover {
+  background: var(--pink);
+  color: #fff;
+}
+
+/* ===== HELPER ===== */
+.hidden { display: none !important; }
+
+@media (max-width: 400px) {
+  .question-card { padding: 20px 16px; }
+  .option-btn { padding: 14px 14px; font-size: 14px; }
+  .score-visual { gap: 10px; }
+  .score-item { min-width: 80px; padding: 12px 8px; }
+}
+
+/* ===== SITE FOOTER ===== */
+.site-footer {
+  background: linear-gradient(165deg, #F2EAD8 0%, #F8F3EA 100%);
+  border-top: 2px solid #F2EAD8;
+  padding: 40px 20px 30px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.footer-tagline {
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #8E1B36;
+  margin-bottom: 24px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: white;
+  border: 1.5px solid #F2EAD8;
+  color: #8E1B36;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  background: #8E1B36;
+  color: white;
+  border-color: #8E1B36;
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  font-size: 12px;
+  color: #B85574;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+  color: #8E1B36;
+}
+
+.footer-copy {
+  font-size: 10px;
+  color: #999;
+  margin-top: 8px;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover" id="cover">
+  <div class="accent-line"></div>
+  <h1>В каком режиме<br>живёт твоя<br>нервная система</h1>
+  <div class="accent-line"></div>
+  <div class="subtitle">Надрыв, овощ или включённый покой?</div>
+  <p class="desc">12 вопросов. 3 минуты. Честный ответ на вопрос, который ты давно себе задаёшь, но боишься услышать. Не думай долго. Первый ответ — самый честный. Тело знает раньше, чем голова разрешит.</p>
+  <button class="btn-start" onclick="startQuiz()">Пройти тест</button>
+</div>
+
+<!-- ===== QUIZ ===== -->
+<div class="quiz-section" id="quiz">
+  <div class="container">
+    <div class="progress-wrap">
+      <div class="progress-bar-outer">
+        <div class="progress-bar-inner" id="progressBar"></div>
+      </div>
+      <div class="progress-text" id="progressText">Вопрос 1 из 12</div>
+    </div>
+    <div id="questionContainer"></div>
+  </div>
+</div>
+
+<!-- ===== RESULTS ===== -->
+<div class="results-section" id="results">
+  <div class="container">
+    <div class="result-header">
+      <div class="accent-line"></div>
+      <h2 id="resultTitle"></h2>
+      <div class="subtitle" id="resultSubtitle"></div>
+    </div>
+    <div class="score-visual">
+      <div class="score-item red">
+        <div class="score-num" id="scoreA">0</div>
+        <div class="score-label">Надрыв</div>
+      </div>
+      <div class="score-item pink">
+        <div class="score-num" id="scoreB">0</div>
+        <div class="score-label">Овощ</div>
+      </div>
+      <div class="score-item gold">
+        <div class="score-num" id="scoreC">0</div>
+        <div class="score-label">Покой</div>
+      </div>
+    </div>
+    <div id="resultContent"></div>
+    <div class="cta-block">
+      <h3>Хочешь перестать качаться<br>и найти свой ритм?</h3>
+      <p>Забирай гайд «7 дней перезагрузки нервной системы» — одна практика в день, без марафонов и насилия над собой</p>
+      <a href="https://content.thevitacode.com/guide/7-dney-perezagruzki/" class="btn-guide">Забрать гайд «7 дней перезагрузки»</a>
+      <br>
+      <button class="retake-btn" onclick="retake()">Пройти ещё раз тест</button>
+    </div>
+  </div>
+</div>
+
+<script>
+var questions = [
+  {
+    label: "Вопрос 1 · Пробуждение",
+    text: "Как ты просыпаешься?",
+    options: [
+      {letter: "А", text: "С тревогой: список дел уже в голове, сердце колотится, надо бежать. Ещё не открыла глаза, а уже опаздываю", val: "A"},
+      {letter: "Б", text: "Не могу встать. Будильник звонит три раза. Тело тяжёлое, веки не разлепляются, смысла вставать нет", val: "B"},
+      {letter: "В", text: "Спокойно. Потягиваюсь, чувствую тело, встаю без рывка. День начинается, а не обрушивается", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 2 · Работа",
+    text: "Что происходит, когда на работе всё навалилось?",
+    options: [
+      {letter: "А", text: "Врубаю турборежим: делаю всё сама, быстро, на нервах. Спать лягу потом. Если кто-то мешает — срываюсь", val: "A"},
+      {letter: "Б", text: "Зависаю. Смотрю на список задач и не могу начать ни одну. Открываю телефон, скроллю, ненавижу себя за это", val: "B"},
+      {letter: "В", text: "Выбираю главное, начинаю с него, остальное подождёт. Если не успею — мир не рухнет", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 3 · Тело",
+    text: "Что с твоим телом прямо сейчас?",
+    options: [
+      {letter: "А", text: "Плечи зажаты, челюсть сжата, дышу верхушкой лёгких. Где-то что-то болит, но я не обращаю внимания", val: "A"},
+      {letter: "Б", text: "Тяжесть, вялость, руки холодные, хочется лечь и не двигаться. Тело как из ваты", val: "B"},
+      {letter: "В", text: "В целом нормально. Чувствую тело, дышу спокойно, ничего не зажато критично", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 4 · Сон",
+    text: "Как ты засыпаешь?",
+    options: [
+      {letter: "А", text: "Мозг не выключается. Прокручиваю разговоры, планы, сценарии катастроф. Засыпаю час-два, иногда дольше", val: "A"},
+      {letter: "Б", text: "Вырубаюсь мгновенно от истощения, но просыпаюсь разбитой, как не спала. Или сплю по 10-12 часов и всё равно устала", val: "B"},
+      {letter: "В", text: "Засыпаю в течение 15–20 минут. Утром чувствую, что выспалась. Сны бывают, но не кошмары", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 5 · Границы",
+    text: "Что ты чувствуешь, когда кто-то просит тебя о помощи?",
+    options: [
+      {letter: "А", text: "Раздражение. Ещё одна задача. Но соглашаюсь, потому что «а как сказать нет» — и потом злюсь на себя", val: "A"},
+      {letter: "Б", text: "Вину. Хочу помочь, но нет сил. И от этого ещё хуже. Я даже помочь нормально не могу", val: "B"},
+      {letter: "В", text: "Спокойно оцениваю: могу — помогу, не могу — скажу об этом без драмы и без вины", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 6 · Эмоции",
+    text: "Как часто ты плачешь?",
+    options: [
+      {letter: "А", text: "Подавляю. Нет времени плакать, есть дела. Иногда прорывается из ниоткуда — в машине, в душе, на ровном месте", val: "A"},
+      {letter: "Б", text: "Часто. От бессилия, от усталости, от того, что не понимаю, что со мной. Иногда даже без причины", val: "B"},
+      {letter: "В", text: "Когда есть повод. Плачу, проживаю, отпускаю. Не застревая в этом на дни", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 7 · Самокритика",
+    text: "Как ты относишься к себе, когда что-то не получается?",
+    options: [
+      {letter: "А", text: "Злюсь. «Почему я такая тупая, медленная, неорганизованная». Делаю ещё больше, чтобы доказать обратное", val: "A"},
+      {letter: "Б", text: "Сдаюсь. «Видимо, не моё. Видимо, я просто не могу». И больше не пробую", val: "B"},
+      {letter: "В", text: "Расстраиваюсь, но пробую снова или ищу другой способ. Ошибка — это информация, а не приговор", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 8 · Дыхание",
+    text: "Обрати внимание на своё дыхание прямо сейчас. Какое оно?",
+    options: [
+      {letter: "А", text: "Поверхностное, быстрое, в верхней части груди. Как будто воздуха не хватает, но я этого обычно не замечаю", val: "A"},
+      {letter: "Б", text: "Тяжёлое, редкое, с вздохами. Иногда забываю дышать, потом делаю длинный вздох", val: "B"},
+      {letter: "В", text: "Ровное, спокойное, животом. Не задерживаю, не ускоряю. Просто дышу", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 9 · Отношения",
+    text: "Как ты ведёшь себя в близких отношениях?",
+    options: [
+      {letter: "А", text: "Контролирую. Решаю за двоих, раздражаюсь, когда партнёр не такой быстрый или организованный, как я", val: "A"},
+      {letter: "Б", text: "Замираю. Боюсь конфликтов, соглашаюсь, молчу, терплю. Потом обижаюсь, но не говорю об этом", val: "B"},
+      {letter: "В", text: "Могу сказать, что чувствую. Могу попросить. Могу выдержать напряжение, не убегая и не нападая", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 10 · Тревога",
+    text: "Бывает ли у тебя тревога без видимой причины?",
+    options: [
+      {letter: "А", text: "Постоянно. Фоновое чувство, что что-то случится. Мозг сканирует угрозы, даже когда всё нормально", val: "A"},
+      {letter: "Б", text: "Тревоги нет, но есть тупая пустота. Как будто батарейка села, и даже тревожиться не на что", val: "B"},
+      {letter: "В", text: "Иногда бывает, но я замечаю это и могу вернуть себя в настоящее. Тревога приходит и уходит, не захватывая", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 11 · Удовольствие",
+    text: "Когда ты последний раз получала удовольствие от чего-то простого?",
+    options: [
+      {letter: "А", text: "Не помню. Я всё время бегу, мне некогда замечать закаты и вкус кофе. Это кажется роскошью для тех, кому нечего делать", val: "A"},
+      {letter: "Б", text: "Раньше многое радовало, а сейчас как будто краски стёрлись. Делаю то же самое, но ничего не чувствую", val: "B"},
+      {letter: "В", text: "Сегодня. Утренний кофе, тёплый свет, разговор с близким человеком. Маленькие вещи наполняют", val: "C"}
+    ]
+  },
+  {
+    label: "Вопрос 12 · Голос нервной системы",
+    text: "Если бы нервная система могла говорить, что бы она сказала тебе прямо сейчас?",
+    options: [
+      {letter: "А", text: "«Остановись. Пожалуйста. Я больше не могу. Ты меня убиваешь»", val: "A"},
+      {letter: "Б", text: "«Разбуди меня, когда станет безопасно. Я ушла в спячку, потому что больше не верю, что станет лучше»", val: "B"},
+      {letter: "В", text: "«Мне хорошо. Давай продолжим. Я с тобой, и мы в ритме»", val: "C"}
+    ]
+  }
+];
+
+var answers = [];
+var currentQ = 0;
+
+function startQuiz() {
+  document.getElementById('cover').style.display = 'none';
+  document.getElementById('quiz').classList.add('active');
+  showQuestion(0);
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function showQuestion(idx) {
+  currentQ = idx;
+  var q = questions[idx];
+  var pct = Math.round((idx / questions.length) * 100);
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('progressText').textContent = 'Вопрос ' + (idx + 1) + ' из ' + questions.length;
+
+  var html = '<div class="question-card">';
+  html += '<div class="q-label">' + q.label + '</div>';
+  html += '<div class="q-text">' + q.text + '</div>';
+  for (var i = 0; i < q.options.length; i++) {
+    var o = q.options[i];
+    var sel = (answers[idx] === o.val) ? ' selected' : '';
+    html += '<button class="option-btn' + sel + '" onclick="selectOption(' + idx + ',\'' + o.val + '\')">';
+    html += '<span class="letter">' + o.letter + '</span> ' + o.text;
+    html += '</button>';
+  }
+  html += '</div>';
+  document.getElementById('questionContainer').innerHTML = html;
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function selectOption(qIdx, val) {
+  answers[qIdx] = val;
+
+  var btns = document.querySelectorAll('.option-btn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.remove('selected');
+  }
+  event.currentTarget.classList.add('selected');
+
+  setTimeout(function() {
+    if (qIdx < questions.length - 1) {
+      showQuestion(qIdx + 1);
+    } else {
+      showResults();
+    }
+  }, 350);
+}
+
+function showResults() {
+  var a = 0, b = 0, c = 0;
+  for (var i = 0; i < answers.length; i++) {
+    if (answers[i] === 'A') a++;
+    else if (answers[i] === 'B') b++;
+    else if (answers[i] === 'C') c++;
+  }
+
+  document.getElementById('quiz').classList.remove('active');
+  document.getElementById('results').classList.add('active');
+  document.getElementById('scoreA').textContent = a;
+  document.getElementById('scoreB').textContent = b;
+  document.getElementById('scoreC').textContent = c;
+  document.getElementById('progressBar').style.width = '100%';
+
+  var content = '';
+  var max = Math.max(a, b, c);
+  var isMixed = (a === b && a === max) || (a === c && a === max) || (b === c && b === max) || (a === b && b === c);
+
+  if (isMixed || (max - Math.min(a,b,c) <= 2 && max <= 5)) {
+    document.getElementById('resultTitle').textContent = 'Ты качаешься';
+    document.getElementById('resultSubtitle').textContent = 'Надрыв — овощ — надрыв — овощ';
+    content += getMixedResult();
+  } else if (a === max) {
+    document.getElementById('resultTitle').textContent = 'Ты в надрыве';
+    document.getElementById('resultSubtitle').textContent = 'Аварийный генератор работает на полную';
+    content += getResultA(a);
+  } else if (b === max) {
+    document.getElementById('resultTitle').textContent = 'Ты в режиме овоща';
+    document.getElementById('resultSubtitle').textContent = 'Тело погасило свет';
+    content += getResultB(b);
+  } else {
+    document.getElementById('resultTitle').textContent = 'Ты во включённом покое';
+    document.getElementById('resultSubtitle').textContent = 'Ты уже в потоке';
+    content += getResultC(c);
+  }
+
+  document.getElementById('resultContent').innerHTML = content;
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function getResultA(count) {
+  var severity = count >= 9 ? 'high' : (count >= 6 ? 'mid' : 'low');
+  var html = '<div class="result-block main red">';
+  html += '<h3>Твоя нервная система на аварийном генераторе</h3>';
+  if (severity === 'high') {
+    html += '<p>У тебя ' + count + ' ответов «А» из 12. Это серьёзный надрыв. Твоё тело работает в режиме «сделай или умри» уже так давно, что ты приняла этот режим за норму. Адреналин, кортизол, зажатые плечи, бессонница, тревога без причины — это не характер и не «просто такая я». Это нервная система, которая забыла, что можно жить иначе.</p>';
+    html += '<p>Ты суперпродуктивна, но это продуктивность загнанной лошади: бьют кнутом — бежит, не бьют — стоит. Ты научилась действовать только из стресса, и тело привыкло, что безопасности не существует. Где-то в детстве ты усвоила: расслабишься — накажут, остановишься — всё развалится. И до сих пор живёшь по этой программе.</p>';
+  } else {
+    html += '<p>У тебя ' + count + ' ответов «А» из 12. Надрыв — твой основной режим. Ты привыкла действовать из стресса, на кортизоле, на «надо вчера». Твоё тело не верит, что можно остановиться и мир не рухнет.</p>';
+    html += '<p>Это не значит, что ты слабая. Это значит, что ты слишком сильная слишком долго. Нервная система устала тянуть, но ты не даёшь ей паузу, потому что пауза ощущается как опасность.</p>';
+  }
+  html += '<p><strong>Что происходит в теле:</strong> кортизол хронически повышен, надпочечники истощаются, иммунитет падает, гормоны расшатываются. Ты можешь жить в этом режиме ещё год, два, пять — но цена будет расти. Сначала бессонница, потом панические атаки, потом тело просто остановит тебя через болезнь.</p>';
+  html += '<p><strong>Первый шаг:</strong> ритм 90/15. 90 минут фокуса, 15 минут тишины. Не телефон, не подкаст — тишина. Поставь таймер прямо сейчас. Твоя нервная система не верит, что можно остановиться и выжить. Покажи ей.</p>';
+  html += '</div>';
+  html += '<div class="quote-block">Стресс — это чужой кнут. Ритм — это твой выбор. Пока ты бежишь на адреналине, ты бежишь не свою дистанцию</div>';
+  return html;
+}
+
+function getResultB(count) {
+  var severity = count >= 9 ? 'high' : (count >= 6 ? 'mid' : 'low');
+  var html = '<div class="result-block main pink">';
+  html += '<h3>Тело решило, что смысла двигаться нет</h3>';
+  if (severity === 'high') {
+    html += '<p>У тебя ' + count + ' ответов «Б» из 12. Это глубокое замирание. Твоя нервная система исчерпала весь ресурс и выключила всё, кроме базового выживания. Как телефон, который перешёл в экономный режим при 5% заряда: экран тусклый, приложения закрыты, связь едва ловит.</p>';
+    html += '<p>Это не лень. Это не «надо просто взять себя в руки». Это защитная реакция организма, который так долго был в надрыве, что единственный способ выжить — заморозить всё. Ты жива, но не функционируешь. И самое тяжёлое — ты злишься на себя за это, что только усиливает замирание.</p>';
+  } else {
+    html += '<p>У тебя ' + count + ' ответов «Б» из 12. Тело ушло в энергосберегающий режим. Организм решил, что двигаться опасно или бесполезно, и погасил свет. Нет энергии, нет желания, нет сил даже хотеть.</p>';
+    html += '<p>За этим замиранием обычно стоит длительный надрыв, который ты перетерпела. Сначала была лошадь, которая пахала. Потом лошадь упала. Ты сейчас на этом этапе.</p>';
+  }
+  html += '<p><strong>Что происходит в теле:</strong> парасимпатическая нервная система доминирует, но не в режиме восстановления, а в режиме «замри и притворись мёртвой». Дофамин и серотонин на минимуме, тело экономит каждую каплю энергии, как будто готовится к голоду.</p>';
+  html += '<p><strong>Первый шаг:</strong> маленькие победы тела. Не «встань и беги», а «встань и сделай 5 приседаний». Выпей стакан воды. Выйди на балкон на 2 минуты. Одно конкретное физическое действие в день. Нервная система оттает, когда увидит, что действие не равно опасности.</p>';
+  html += '</div>';
+  html += '<div class="quote-block">Ты не сломалась. Ты перегрелась и выключилась. Телефон на 5% заряда не сломан — ему нужна розетка, а не удар по корпусу</div>';
+  return html;
+}
+
+function getResultC(count) {
+  var html = '<div class="result-block main gold">';
+  html += '<h3>Ты уже в потоке</h3>';
+  html += '<p>У тебя ' + count + ' ответов «В» из 12. Ты в режиме включённого покоя. Не расслаблена и не в панике — сфокусирована. Так музыканты играют на сцене, хирурги оперируют, спортсмены выступают на Олимпиадах. Они не в стрессе — они в потоке, и они чувствуют себя.</p>';
+  html += '<p>Ты умеешь действовать без кнута. Отдыхать без вины. Плакать, когда есть повод, и отпускать, когда пора. Твоя нервная система знает третий вариант — тот, которому большинство женщин только учатся.</p>';
+  html += '<p><strong>Что это значит:</strong> твой вагусный нерв работает хорошо, кортизол в норме, тело и сознание синхронизированы. Ты умеешь переключаться между активной фазой и восстановлением. Это и есть модель Волны.</p>';
+  html += '<p><strong>Что делать:</strong> удерживай ритм. Замечай, когда начинаешь скатываться в надрыв или замирание. Шкала 0–10 — твой инструмент навигации. 0–2 — замирание, 4–6 — поток, 8–10 — надрыв. Три раза в день спрашивай себя: «Где я сейчас?»</p>';
+  html += '</div>';
+  html += '<div class="quote-block">Ты не пришла к покою случайно. Ты его выбрала. Продолжай выбирать каждый день — и помоги другой женщине увидеть, что это возможно</div>';
+  return html;
+}
+
+function getMixedResult() {
+  var html = '<div class="result-block main mixed">';
+  html += '<h3>Американские горки нервной системы</h3>';
+  html += '<p>Твои ответы распределились примерно поровну. Это значит, что ты качаешься: надрыв — овощ — надрыв — овощ. То взлетаешь вверх на чистом адреналине, то падаешь вниз в полную апатию. И всё это на тотальном кортизоле, без перехода и без середины.</p>';
+  html += '<p>Это самый распространённый результат. И это нормально. Потому что никто не учил тебя спокойно действовать — только убегать или выживать. В детстве середины не было: либо тебя не трогали и ты замирала, либо требовали, наказывали, держали в напряжении — и ты мобилизовалась.</p>';
+  html += '<p><strong>Что происходит:</strong> нервная система прыгает между симпатикой (бей-беги) и дорсальным вагусом (замри). Вентральный вагус — тот, что отвечает за спокойную активность и включённый покой — не натренирован. У волны есть подъём и спад, и проблема не в том, что они есть, а в том, что нет плавного перехода между ними.</p>';
+  html += '<p><strong>Первый шаг:</strong> начни замечать переключения. Когда чувствуешь, что разгоняешься — сделай дыхание по квадрату (4-4-4-4). Когда чувствуешь, что проваливаешься — встань и сделай 5 приседаний. Ты учишь нервную систему третьему варианту. Тому, где ты Волна: методичная, размеренная, настойчивая.</p>';
+  html += '</div>';
+  html += '<div class="quote-block">Середины не было, потому что так было устроено твоё детство. Либо убегать, либо выживать. Но сейчас ты взрослая. И ты можешь научить свою нервную систему третьему варианту</div>';
+  return html;
+}
+
+function retake() {
+  answers = [];
+  currentQ = 0;
+  document.getElementById('results').classList.remove('active');
+  document.getElementById('cover').style.display = '';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+<!-- ===== SITE FOOTER ===== -->
+<footer class="site-footer">
+  <div class="brand-logo" style="margin-bottom: 20px;">
+    <img src="data:image/png;base64,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" width="42" height="42" alt="Vita Code" style="display:inline-block;">
+    <span class="brand-name">VITA CODE</span>
+  </div>
+  <div class="footer-tagline">Здесь всё для тебя, про тебя и ради тебя</div>
+
+  <div class="social-icons">
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/thevitacode/" target="_blank" rel="noopener" class="social-icon" title="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+    <!-- Telegram -->
+    <a href="https://t.me/thevitacode" target="_blank" rel="noopener" class="social-icon" title="Telegram">
+      <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/AlekseenkoVictoria/" target="_blank" rel="noopener" class="social-icon" title="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/channel/UC5xeeMZ8lDL6cF_-brrsYlg" target="_blank" rel="noopener" class="social-icon" title="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
+  </div>
+
+  <div class="footer-links">
+    <a href="https://thevitacode.com" target="_blank">thevitacode.com</a>
+    <a href="https://keys-to-yourself.com" target="_blank">keys-to-yourself.com</a>
+    <a href="https://content.thevitacode.com/test/" target="_blank">Все тесты</a>
+    <a href="https://content.thevitacode.com/guide/" target="_blank">Гайды</a>
+  </div>
+
+  <div class="footer-copy">&copy; 2026 Vita Code. Виктория Алексеенко. Все права защищены.</div>
+</footer>
+
+</body>
+</html>
